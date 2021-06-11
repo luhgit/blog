@@ -4,7 +4,7 @@ title:  "Impact of COVID-19 on ML/AI Models in Production"
 author: amit
 categories: [ Machine Learning, Artificial Intelligence, COVID-19, Demand Forecasting ]
 tags: [production, AI, ML, COVID19]
-image: "assets/images/coming-soon.png"
+image: "assets/images/covid-impact-on-ml-models.jpeg"
 description: "Impact of COVID-19 on ML/AI Models in Production"
 featured: true
 hidden: true
