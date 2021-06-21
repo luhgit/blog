@@ -72,8 +72,9 @@ exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 #  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
 #
 # for me, this line reads:
-# https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
-staticman_url: https://${bridge_app_name}.herokuapp.com/v2/entry/${github-username}/${blog-repo}/master/comments
+# https://${bridge_app_name}.herokuapp.com/v2/entry/${github-username}/${blog-repo}/master/comments
+# e.g. https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
+staticman_url: https://zgyasa-blog-comments.herokuapp.com/v2/entry/luhgit/blog/master/comments
 
 # reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
 # I personally don't think the secret needs to be included in the generated site, but the staticman API bridge uses
