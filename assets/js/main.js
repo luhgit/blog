@@ -12,8 +12,8 @@
     //     '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
     //   );
 
-    $("#comment-form-submit").val('Submitting...').prop('disabled', true);
-      //$("#comment-form-submit").wrapInner('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...');
+    //$("#comment-form-submit").val('Submitting...').prop('disabled', true);
+    $("#comment-form-submit").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...');
       
 
       $(form).addClass('disabled');
