@@ -5,64 +5,48 @@
     var $comments = $('.js-comments');
   
     $('.js-form').submit(function () {
-      var form = this;
-  
-  
-    //   $("#comment-form-submit").html(
-    //     '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
-    //   );
+        var form = this;
+        $("#comment-form-submit").html('Submitting...');
+        $(form).addClass('disabled');
 
-    //$("#comment-form-submit").val('Submitting...').prop('disabled', true);
-    $("#comment-form-submit").html(
-        '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>' + 
-        '<span>Submitting...</span>'
-    );
-      
-
-      $(form).addClass('disabled');
-  
-      $.ajax({
+        $.ajax({
         type: $(this).attr('method'),
         url:  $(this).attr('action'),
         data: $(this).serialize(),
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
-        //   showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
-  
-        
-        //   $('#modalBody').val('Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.')
-          $('#modalSubmit').modal('show');
+            showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
 
-          $("#comment-form-submit").html("Submit");
-  
-          $(form)[0].reset();
-          $(form).removeClass('disabled');
-          if (window.grecaptcha) {
-            grecaptcha.reset();
-          }
+            $("#comment-form-submit").html("Submit");
+
+            $(form)[0].reset();
+            $(form).removeClass('disabled');
+            if (window.grecaptcha) {
+                grecaptcha.reset();
+            }
         },
         error: function (err) {
-          console.log(err);
-          var ecode = (err.responseJSON || {}).errorCode || "unknown";
-          showModal('Error', 'An error occured.<br>[' + ecode + ']');
-          $("#comment-form-submit").html("Submit")
-          $(form).removeClass('disabled');
-          if (window.grecaptcha) {
+            console.log(err);
+            var ecode = (err.responseJSON || {}).errorCode || "unknown";
+            showModal('Error', 'An error occured.<br>[' + ecode + ']');
+            $("#comment-form-submit").html("Submit")
+            $(form).removeClass('disabled');
+            if (window.grecaptcha) {
             grecaptcha.reset();
-          }
+            }
         }
-      });
-      return false;
+        });
+    return false;
     });
   
-    $('.js-close-modal').click(function () {
-      $('body').removeClass('show-modal');
-    });
+    // $('.js-close-modal').click(function () {
+    //   $('body').removeClass('show-modal');
+    // });
   
     function showModal(title, message) {
-      $('.js-modal-title').text(title);
-      $('.js-modal-text').html(message);
-      $('body').addClass('show-modal');
+      $('#modalSubmitTitle').text(title);
+      $('#modalBody').html(message);
+      $('#modalSubmit').modal('show');
     }
   })(jQuery);
   
