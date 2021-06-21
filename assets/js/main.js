@@ -13,7 +13,7 @@
     //   );
 
       $("#comment-form-submit").prop('disabled', true);
-      $("#comment-form-submit").val('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>');
+      $("#comment-form-submit").wrapInner('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>');
       $("#comment-form-submit").val('Submitting...');
 
       $(form).addClass('disabled');
