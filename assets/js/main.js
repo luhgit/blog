@@ -8,9 +8,14 @@
       var form = this;
   
   
-      $("#comment-form-submit").html(
-        '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
-      );
+    //   $("#comment-form-submit").html(
+    //     '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
+    //   );
+
+      $("#comment-form-submit").prop('disabled', true);
+      $("#comment-form-submit").val('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>');
+      $("#comment-form-submit").val('Submitting...');
+
       $(form).addClass('disabled');
   
       $.ajax({
