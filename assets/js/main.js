@@ -39,10 +39,6 @@
     return false;
     });
   
-    // $('.js-close-modal').click(function () {
-    //   $('body').removeClass('show-modal');
-    // });
-  
     function showModal(title, message) {
       $('#modalSubmitTitle').text(title);
       $('#modalBody').html(message);
