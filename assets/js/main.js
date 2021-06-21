@@ -14,7 +14,8 @@
 
     //$("#comment-form-submit").val('Submitting...').prop('disabled', true);
     $("#comment-form-submit").html(
-        '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span> Submitting...'
+        '<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>' + 
+        '<span>Submitting...</span>'
     );
       
 
