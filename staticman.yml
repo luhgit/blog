@@ -78,7 +78,7 @@ comments:
 
   # note that reCaptcha is nested under comments
   reCaptcha:
-    enabled: true
+    enabled: false
     # the siteKey is used as-is (no encryption)
     siteKey: "6LdXxkgbAAAAANbU2_ld_meT1ZXIM8SimkKG77th"
     # the secret is the encrypted blob you got back from the encrypt call
