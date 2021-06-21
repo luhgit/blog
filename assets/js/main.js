@@ -29,10 +29,11 @@
         success: function (data) {
         //   showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
   
-          $("#comment-form-submit").html("Submit");
-
-          $('#modalBody').val('Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.')
+        
+        //   $('#modalBody').val('Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.')
           $('#modalSubmit').modal('show');
+
+          $("#comment-form-submit").html("Submit");
   
           $(form)[0].reset();
           $(form).removeClass('disabled');
