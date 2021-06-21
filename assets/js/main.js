@@ -27,10 +27,12 @@
         data: $(this).serialize(),
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
-          showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
+        //   showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
   
-          $("#comment-form-submit")
-            .html("Submit");
+          $("#comment-form-submit").html("Submit");
+
+          $('#modalBody').val('Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.')
+          $('#modalSubmit').modal('show');
   
           $(form)[0].reset();
           $(form).removeClass('disabled');
