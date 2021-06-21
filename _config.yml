@@ -62,3 +62,22 @@ adsense-data-ad-slot: "1363087678"
 lazyimages: "disabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+# The URL for the staticman API bridge endpoint
+# You will want to modify some of the values:
+#  ${github-username}: the username of the account with which you publish your blog
+#  ${blog-repo}: the name of your blog repository in github
+#  master: this the branch out of which your blog is published, often master or gh-pages
+#  ${bridge_app_name}: the name you chose in Heroku for your bridge API
+#  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
+#
+# for me, this line reads:
+# https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
+staticman_url: https://${bridge_app_name}.herokuapp.com/v2/entry/${github-username}/${blog-repo}/master/comments
+
+# reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
+# I personally don't think the secret needs to be included in the generated site, but the staticman API bridge uses
+# it to ensure the site configuration and bridge configuration match (but why not just compare the site key?)
+reCaptcha:
+  siteKey: 6LdXxkgbAAAAANbU2_ld_meT1ZXIM8SimkKG77th
+  secret: Phc1kjaNIDgsSImKr66loPV7sfYYWCGvosD8aMW9n2shz0sKbqv69XtEPP+vwtQqGRG1ZuNZ2ehl0OV7OykQz1rgxf/Q/0g69Yu1VRaLX/tzFGrt3QIQfxDUS/jxFqTMBFAiOCtxc5SyH3OHOIT+kVIjOairBzlAgcFHVukLJq2dIOxAJfmM2JvcRYSAyrUTCyr1YASWDCjmKlNVCfgjnbgKsCIZSagjfTcNR9lEr+nCcYn2RFtZNGCwRjLRNXmhgN9NaeilLWfXOimBokk8WZfPAN3ZMcpwi2bGl5PFuQ5WY3cPih07hOKhokvfmdzB4v49kS8PoIaMY4n/ZSdL7RQDtFrsVNqNmosy5ZDjGKD8+4ewU3Gmkq6PEjT8ZtpEmsekR92NJk1MwKjPIhlrFG3JIjVxd2x2s/clUSk9v2C/t2qohWkn36/QzIA0Q643rK5WNSsyWEo8SpuYkQwpGF5nd5ROZYVq4Ahbup/KjRKMrHm7+bawjjl/MG526gdlKvNfLBeXAsIjlfcbfnxGn0zo8t+84DmAQlrII7gryLGet1e+lYjT0iYff4Y3fxkvA+0/qMnIndaKU/MKb1XMEMA+TGu3yCaNYyk2kUEmdMI/jxXNPa3/zERib1GvhMNoGJtXCQHURAjwNtlsCnAx3zn8nXubCR7za9GOSvlUUy8=
