@@ -8,6 +8,7 @@ image: "assets/images/covid-impact-on-ml-models.jpeg"
 description: "Impact of COVID-19 on ML/AI Models in Production"
 featured: true
 hidden: true
+comments: true
 ---
 
 In the time of COVID-19, almost all aspects of our lives are affected, some being slightly resilient and others being heavily hit. Even the weather forecast are going to be affected by corona while weather is not. The reason for that is the dependencies of the weather forecasting models on the [data collected by aircraft](https://www.accuweather.com/en/severe-weather/coronavirus-canceled-flights-could-affect-weather-forecasting-at-exactly-the-wrong-time/711234){:target="_blank"} e.g., Wind speed, Wind direction, Air pressure, Air temperature together with Temporal and Spatial information. As per [ECMWF](https://www.ecmwf.int){:target="_blank"}, The data collected by aircraft is [second only to satellite data](https://www.ecmwf.int/en/about/media-centre/news/2020/drop-aircraft-observations-could-have-impact-weather-forecasts) in terms of their significance for weather predictions. Now due to the very heavy reduction in air traffic the weather forecast accuracy will be slightly impacted but the impact will still be [statistically significant](https://www.aljazeera.com/news/2020/03/weather-predictions-affected-coronavirus-outbreak-200326104501955.html){:target="_blank"}.
