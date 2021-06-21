@@ -3,8 +3,9 @@
 
 $base-font-size:    18px !default;
 $comment-font-size: 17px !default;
-
-@import "minima";
+$base-font-weight: 400 !default;
+$base-font-family: 'Noto Sans' !default;
+$base-line-height: 1.5 !default;
 
 //
 // Staticman new comment form
