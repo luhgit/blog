@@ -9,24 +9,39 @@
       <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
     {% endif %}
 
-    <div class="mb-3">
-      <label for="comment" class="form-label"><h2>Add Comment<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2></label>
-      <textarea class="form-control" name=fields[message] id="comment" rows="3" placeholder="Your comment (markdown accepted)" required></textarea>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <label for="comment" class="form-label"><h4>Add Comment<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h4></label>
+        <textarea class="form-control" name=fields[message] id="comment" rows="3" placeholder="Your comment (markdown accepted)" required></textarea>
+      </div>
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input type="text" class="form-control" name=fields[name] id="name" placeholder="Your name (required)" required/>
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">Email</label>
       <input type="email" name=fields[email] class="form-control" id="email" placeholder="Your email (optional)"/>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" name=fields[name] id="name" placeholder="Your name (required)" required/>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <input type="email" name=fields[email] class="form-control" id="email" placeholder="Your email (optional)"/>
+      </div>
     </div>
+    
   
     {% if site.reCaptcha.enabled %}
       <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
     {% endif %}
 
-    <button type="submit" id="comment-form-submit" class="btn btn-success mb-3">Submit</button>
+    <div class="text-center">
+      <button type="submit" id="comment-form-submit" class="btn btn-success mb-3">Submit</button>
+    </div>
 </form>
 
 <!-- Modal -->
@@ -48,3 +63,6 @@
     </div>
   </div>
 </div>
+
+<!--Alert for comment posting-->
+<div class="alert-message"></div>

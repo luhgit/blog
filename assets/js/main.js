@@ -15,10 +15,11 @@
         data: $(this).serialize(),
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
-            showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.');
+            showCommentAlert('Comment submitted', 
+                             'Thanks! Your comment is <a href="https://github.com/luhgit/blog/pulls">pending</a>. It will appear when approved.', 
+                             'success');
 
             $("#comment-form-submit").html("Submit");
-
             $(form)[0].reset();
             $(form).removeClass('disabled');
             if (window.grecaptcha) {
@@ -28,7 +29,8 @@
         error: function (err) {
             console.log(err);
             var ecode = (err.responseJSON || {}).errorCode || "unknown";
-            showModal('Error', 'An error occured.<br>[' + ecode + ']');
+            showCommentAlert('Error', 'An error occured.<br>[' + ecode + ']', 'danger');
+
             $("#comment-form-submit").html("Submit")
             $(form).removeClass('disabled');
             if (window.grecaptcha) {
@@ -39,11 +41,12 @@
     return false;
     });
   
-    function showModal(title, message) {
-      $('#modalSubmitTitle').text(title);
-      $('#modalBody').html(message);
-      $('#modalSubmit').modal('show');
+    function showCommentAlert(title, message, alertType) {
+      var htmlAlert = '<div class="alert alert-'+ alertType +'" role="alert"><h4 class="alert-heading">'+ title +'</h4><p>'+ message +'</p></div>';
+      $(".alert-message").prepend(htmlAlert);
+      $(".alert-message .alert").first().hide().fadeIn(200).delay(3000).fadeOut(10000, function () { $(this).remove(); });
     }
+
   })(jQuery);
   
   // Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
