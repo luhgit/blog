@@ -1,0 +1,84 @@
+# Site
+name: "Zgyasa"
+title: "Zgyasa"
+description: "Thoughts worth to be written."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+google_analytics: '' 
+disqus: 'zgyasa'
+mailchimp-list: ''
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  amit:
+    name: Amit
+    display_name: Amit
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: amit.hannover@gmail.com
+    web: https://www.amittyagi.com
+    twitter: https://twitter.com/amit_tyagi
+    description: "Author at Zgyasa blog."
+
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+# adsense: "disabled"
+# adsense-data-ad-client: "ca-pub-3412143450191416"
+# adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+# The URL for the staticman API bridge endpoint
+# You will want to modify some of the values:
+#  ${github-username}: the username of the account with which you publish your blog
+#  ${blog-repo}: the name of your blog repository in github
+#  master: this the branch out of which your blog is published, often master or gh-pages
+#  ${bridge_app_name}: the name you chose in Heroku for your bridge API
+#  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
+#
+# for me, this line reads:
+# https://${bridge_app_name}.herokuapp.com/v2/entry/${github-username}/${blog-repo}/master/comments
+# e.g. https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
+staticman_url: https://zgyasa-blog-comments.herokuapp.com/v2/entry/luhgit/blog/master/comments
+
+# reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
+# I personally don't think the secret needs to be included in the generated site, but the staticman API bridge uses
+# it to ensure the site configuration and bridge configuration match (but why not just compare the site key?)
+reCaptcha:
+  siteKey: "6LdXxkgbAAAAANbU2_ld_meT1ZXIM8SimkKG77th"
+  secret: "SPi0qDOWrnZAUSJMDMMHn9bDwy0medQRqx9QMz9pJntEFlZgvvB8rEOsbU4DQ5rYLyGlq/SayQW5VSvcRlVhWjILxSVIlojxIIGAMoXyZDyRYzwdFie9WI7dS9xmLP4FwbIaG+zUNbUbI49JWd4oW6IlFTzTFf5qp5dVO88P3xRpuOn1EKSV2zBpOo8dP3owlsAbbwioyWhjDm6J9I/eSxH2jj1IJH5BH/dXptcmuX1NXm5uwcwQrPaLzBaace+hOt/AuIxVGYdF1yJi0JO7kDscQUTQmbqpLeRC1OUq8Bj5mg3yoTq9d+j883M5Tt+0PZ8KXg5UKIvCWsdKK8AyCjYXp6YDbpv9a2GsEm2Q3X6Skg5xynY7QFDP6BTsBaY54LOrm7+TsvLEUnn6+lmQAc1ngM7rCOZQiuAmu3FbeglEYoRDHuCG4prQGn32hu6PPUUpDrtm0rluHLyixTONrWD0P0XtdPKhkZTWWYFvs5jS0LYcK8PSsLjh0L61cTy+nKgfY2ACeKDUU07dsvLQxL2/WkBaDNJP5aFskM7AHLxlsEe3OvddwEt131WzJurDaqknFV70wlPLWxun/xz5BVz3sSerAu5ZC7JiXwrGwMacallr3aADNEiNm72YnCuLyIPKy3TfTUC/0UxOFzbtLTIogr5I6o3Igo/66gCxUoI="
