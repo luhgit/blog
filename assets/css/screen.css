@@ -300,7 +300,7 @@ span.post-read-more a:hover {
 }
 
 .mediumnavigation .navbar-brand img {
-    max-height: 30px;
+    max-height: 40px;
     margin-right: 5px;
 }
 
@@ -561,6 +561,11 @@ ul.tags li a:hover {
     padding: 14px 0;
     z-index: 1;
     display: none;
+}
+
+.alertbar img {
+    max-height: 35px;
+    margin-right: 5px;
 }
 
 .alertbar form {
