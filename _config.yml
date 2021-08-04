@@ -7,7 +7,7 @@ favicon: 'assets/images/favicon.ico'
 baseurl: 'https://blog.amittyagi.com' #'blog'
 google_analytics: '' #'UA-46278016-1'
 disqus: 'zgyasa'
-mailchimp-list: '' #'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+mailchimp-list: 'https://amittyagi.us5.list-manage.com/subscribe/post?u=9aa2f40470c50cc94079b2a56&amp;id=44d86c9bd0'
 include: ["_pages"]
 permalink: /:title/
 

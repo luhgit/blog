@@ -7,7 +7,7 @@ favicon: 'assets/images/favicon.ico'
 baseurl: ''
 google_analytics: '' 
 disqus: 'zgyasa'
-mailchimp-list: ''
+mailchimp-list: 'https://amittyagi.us5.list-manage.com/subscribe/post?u=9aa2f40470c50cc94079b2a56&amp;id=44d86c9bd0'
 include: ["_pages"]
 permalink: /:title/
 
