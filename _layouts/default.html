@@ -37,6 +37,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '{{site.google_analytics}}', 'auto');
 ga('send', 'pageview');
 </script>
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9aa2f40470c50cc94079b2a56/85a0dee164cc959a80ee734e2.js");</script>
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
@@ -127,8 +129,8 @@ ga('send', 'pageview');
 		<span><img id="short-logo" src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from <b>Zgyasa</b>, subscribe to the newsletter</span>
         <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
             <div class="mc-field-group">
-            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-            <input type="submit" value="Subscribe" name="subscribe" class="heart">
+            <input type="email" placeholder="Email" name="EMAIL" id="mce-EMAIL" class="required email" autocomplete="on" required>
+            <input type="submit" value="Subscribe"  name="subscribe" class="btn btn-success">
             </div>
         </form>
 	</div>
