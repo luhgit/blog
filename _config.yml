@@ -21,6 +21,7 @@ authors:
     email: amit.hannover@gmail.com
     web: https://www.amittyagi.com
     twitter: https://twitter.com/amit_tyagi
+    linkedin: https://www.linkedin.com/in/exploreamittyagi
     description: "Author at Zgyasa blog."
 
 
@@ -60,7 +61,7 @@ adsense-data-ad-client: "ca-pub-3412143450191416"
 adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+lazyimages: "enabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 
