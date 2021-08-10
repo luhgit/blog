@@ -4,7 +4,7 @@ title: "Zgyasa"
 description: "Thoughts worth to be written."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: 'https://blog.amittyagi.com' #'blog'
+baseurl: 'https://www.zgyasa.com' #'blog'
 google_analytics: 'G-VEV972PZB9'
 disqus: 'zgyasa'
 mailchimp-list: 'https://amittyagi.us5.list-manage.com/subscribe/post?u=9aa2f40470c50cc94079b2a56&amp;id=44d86c9bd0'
@@ -61,7 +61,7 @@ adsense-data-ad-client: "ca-pub-3412143450191416"
 adsense-data-ad-slot: "1363087678"
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "enabled"
+lazyimages: "disabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 
